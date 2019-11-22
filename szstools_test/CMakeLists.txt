@@ -1,0 +1,5 @@
+add_executable(dump-test RarcDumpTest.cxx)
+add_dependencies(dump-test szstools)
+target_link_libraries(dump-test PUBLIC GTest::GTest GTest::Main)
+target_link_libraries(dump-test PRIVATE szstools)
+target_include_directories(dump-test PRIVATE ../szstools)
